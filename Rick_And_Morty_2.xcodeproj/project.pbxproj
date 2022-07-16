@@ -23,10 +23,10 @@
 		3A6FF1382847AF36006855F4 /* UIImageView+Downloaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6FF1372847AF36006855F4 /* UIImageView+Downloaded.swift */; };
 		3A6FF13B284CA436006855F4 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6FF13A284CA436006855F4 /* Network.swift */; };
 		3A74FCD428561CC60096948D /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A74FCD328561CC60096948D /* CharacterDetailViewController.swift */; };
+		3A7638702883040C006C5032 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A76386F2883040C006C5032 /* GoogleService-Info.plist */; };
 		3A8312C52867444E009CAB0C /* CustomHeaderForTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8312C42867444E009CAB0C /* CustomHeaderForTableView.swift */; };
 		3A8312C728678A04009CAB0C /* CustomHeaderForTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8312C628678A04009CAB0C /* CustomHeaderForTableView.xib */; };
 		3A8312CE286F279C009CAB0C /* EmptyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8312CD286F279C009CAB0C /* EmptyDetailViewController.swift */; };
-		3AD117C6287D7AD300BCFF58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AD117C5287D7AD300BCFF58 /* GoogleService-Info.plist */; };
 		3AD117D1287D8EA500BCFF58 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD117D0287D8EA500BCFF58 /* FirebaseAuth */; };
 		3AD117D3287D8EB200BCFF58 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD117D2287D8EB200BCFF58 /* FirebaseDatabase */; };
 		3AD117D7287DB87500BCFF58 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD117D6287DB87500BCFF58 /* AuthorizationViewController.swift */; };
@@ -52,10 +52,10 @@
 		3A6FF1372847AF36006855F4 /* UIImageView+Downloaded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Downloaded.swift"; sourceTree = "<group>"; };
 		3A6FF13A284CA436006855F4 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		3A74FCD328561CC60096948D /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		3A76386F2883040C006C5032 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3A8312C42867444E009CAB0C /* CustomHeaderForTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderForTableView.swift; sourceTree = "<group>"; };
 		3A8312C628678A04009CAB0C /* CustomHeaderForTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderForTableView.xib; sourceTree = "<group>"; };
 		3A8312CD286F279C009CAB0C /* EmptyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDetailViewController.swift; sourceTree = "<group>"; };
-		3AD117C5287D7AD300BCFF58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3AD117D6287DB87500BCFF58 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		3AE0927F285B486600E701C4 /* MainSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +79,7 @@
 				3A6FF129284774B2006855F4 /* Assets.xcassets */,
 				3A6FF12B284774B2006855F4 /* LaunchScreen.storyboard */,
 				3A6FF12E284774B2006855F4 /* Info.plist */,
-				3AD117C5287D7AD300BCFF58 /* GoogleService-Info.plist */,
+				3A76386F2883040C006C5032 /* GoogleService-Info.plist */,
 				3A6FF120284774B1006855F4 /* AppDelegate.swift */,
 				3A6FF122284774B1006855F4 /* SceneDelegate.swift */,
 			);
@@ -269,7 +269,7 @@
 				3A6FF128284774B1006855F4 /* Main.storyboard in Resources */,
 				3A8312C728678A04009CAB0C /* CustomHeaderForTableView.xib in Resources */,
 				3A1917782856134400F1A506 /* CharacterTableViewCell.xib in Resources */,
-				3AD117C6287D7AD300BCFF58 /* GoogleService-Info.plist in Resources */,
+				3A7638702883040C006C5032 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
