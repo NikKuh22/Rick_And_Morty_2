@@ -335,34 +335,28 @@ In and out. 20 minute adventure!</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GzL-zQ-VBT">
                                                 <rect key="frame" x="0.0" y="0.0" width="347" height="34"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Yet-dj-bAa">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Yet-dj-bAa">
                                                         <rect key="frame" x="0.0" y="1.5" width="19" height="31.5"/>
                                                         <color key="tintColor" name="AccentColor"/>
                                                     </imageView>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gK6-VD-6Fo">
+                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gK6-VD-6Fo">
                                                         <rect key="frame" x="27" y="0.0" width="320" height="34"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="320" id="ey4-Y1-1dd"/>
-                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ox4-hs-34S">
                                                 <rect key="frame" x="0.0" y="54" width="347" height="34"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="lock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6lS-RJ-VYo">
-                                                        <rect key="frame" x="0.0" y="0.5" width="19" height="32.5"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="lock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6lS-RJ-VYo">
+                                                        <rect key="frame" x="0.0" y="0.5" width="18.5" height="32.5"/>
                                                         <color key="tintColor" name="AccentColor"/>
                                                     </imageView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrH-z6-wvr">
-                                                        <rect key="frame" x="27" y="0.0" width="320" height="34"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="320" id="oZo-R0-yxr"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="26.5" y="0.0" width="320.5" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="continue" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -376,6 +370,9 @@ In and out. 20 minute adventure!</string>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="GzL-zQ-VBT" firstAttribute="centerX" secondItem="XaT-o0-dlk" secondAttribute="centerX" id="rRm-YX-ejj"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hWu-IS-kQY"/>
@@ -384,6 +381,7 @@ In and out. 20 minute adventure!</string>
                             <constraint firstItem="hWu-IS-kQY" firstAttribute="bottom" secondItem="XaT-o0-dlk" secondAttribute="bottom" constant="404.5" id="CDz-wZ-5EC">
                                 <variation key="heightClass=compact" constant="90"/>
                             </constraint>
+                            <constraint firstItem="hWu-IS-kQY" firstAttribute="trailing" secondItem="XaT-o0-dlk" secondAttribute="trailing" constant="33" id="JYD-Ob-X1h"/>
                             <constraint firstItem="XaT-o0-dlk" firstAttribute="leading" secondItem="hWu-IS-kQY" secondAttribute="leading" constant="34" id="uuO-MW-Bll"/>
                         </constraints>
                     </view>
@@ -416,7 +414,7 @@ In and out. 20 minute adventure!</string>
         <image name="lock" catalog="system" width="128" height="128"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <namedColor name="AccentColor">
-            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.57999998331069946" green="0.32199999690055847" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

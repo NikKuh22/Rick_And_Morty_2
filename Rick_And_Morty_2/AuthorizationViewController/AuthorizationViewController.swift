@@ -14,13 +14,12 @@ final class AuthorizationViewController: UIViewController {
     @IBOutlet var userTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    let alert = UIAlertController(title: "Oops...", message: "Incorrectly entered password or email", preferredStyle: .alert)
-    
     @IBAction func loginEnterButton(_ sender: Any) {
         if authorizedUser == true {
             let charactersViewController = UIStoryboard (name: "Main", bundle: .main).instantiateViewController(withIdentifier: "MainSplitViewController") as! MainSplitViewController
             present(charactersViewController, animated: true)
         } else {
+            let alert = UIAlertController(title: "Oops...", message: "Incorrectly entered password or email", preferredStyle: .alert)
             print("Error")
             alert.addAction(UIAlertAction(title: "Ok", style: .default))
             present(alert, animated: true)
@@ -31,9 +30,7 @@ final class AuthorizationViewController: UIViewController {
         super.viewDidLoad()
         userTextField.delegate = self
         passwordTextField.delegate = self
-        passwordTextField.isSecureTextEntry = true
 
-        
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
     }
