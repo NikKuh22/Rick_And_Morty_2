@@ -9,12 +9,14 @@ import UIKit
 import Firebase
 
 final class AuthorizationViewController: UIViewController {
+    
     var authorizedUser: Bool = false
     
-    @IBOutlet var userTextField: UITextField!
+    @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
     @IBAction func loginEnterButton(_ sender: Any) {
+        logicForAuth()
         if authorizedUser == true {
             let charactersViewController = UIStoryboard (name: "Main", bundle: .main).instantiateViewController(withIdentifier: "MainSplitViewController") as! MainSplitViewController
             present(charactersViewController, animated: true)
@@ -28,26 +30,41 @@ final class AuthorizationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userTextField.delegate = self
+        emailTextField.delegate = self
         passwordTextField.delegate = self
+        passwordTextField.endEditing(true)
 
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
+        
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notificaton:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 }
 
 extension AuthorizationViewController: UITextFieldDelegate {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        logicForAuth()
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        passwordTextField.becomeFirstResponder()
+        return true
+    }
+}
+
+extension AuthorizationViewController {
+    
+    @objc private func keyboardWillShow(notificaton: NSNotification) {
+//      let keyboardFrame: NSValue = notificaton.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue
+//      let keyboardHeight = keyboardFrame.cgRectValue.height
+//      let textField = self.view.frame.height - (passwordTextField.frame.origin.y + passwordTextField.frame.height)
+        self.view.frame.origin.y -= 100
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        logicForAuth()
-        return true
+    @objc private func keyboardWillHide() {
+        self.view.frame.origin.y = 0
     }
     
     func logicForAuth() {
-        let user = userTextField.text!
+        let user = emailTextField.text!
         let password = passwordTextField.text!
         
         Auth.auth().signIn(withEmail: user, password: password) { result, error in
