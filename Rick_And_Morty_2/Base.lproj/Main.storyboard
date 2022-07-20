@@ -267,7 +267,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8.4499999999999993" translatesAutoresizingMaskIntoConstraints="NO" id="kev-EP-XsR">
-                                            <rect key="frame" x="42.5" y="19" width="162" height="20.5"/>
+                                            <rect key="frame" x="42.5" y="18.5" width="162" height="20.5"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="chevron.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CKM-hU-toe">
                                                     <rect key="frame" x="0.0" y="2" width="12.5" height="17"/>
@@ -362,7 +362,7 @@ In and out. 20 minute adventure!</string>
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEt-VG-1xz">
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEt-VG-1xz">
                                         <rect key="frame" x="0.0" y="172.5" width="58.5" height="31"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Enter"/>
                                         <connections>
@@ -386,6 +386,7 @@ In and out. 20 minute adventure!</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonEnter" destination="SEt-VG-1xz" id="n2N-yg-V0F"/>
                         <outlet property="emailTextField" destination="gK6-VD-6Fo" id="eO3-q4-Ffq"/>
                         <outlet property="passwordTextField" destination="hrH-z6-wvr" id="DU8-HV-cUJ"/>
                     </connections>
@@ -414,7 +415,7 @@ In and out. 20 minute adventure!</string>
         <image name="lock" catalog="system" width="128" height="128"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <namedColor name="AccentColor">
-            <color red="0.57999998331069946" green="0.32199999690055847" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
