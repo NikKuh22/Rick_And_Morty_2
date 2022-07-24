@@ -57,6 +57,26 @@ final class AuthorizationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { granted, error in
+            
+        }
+        center.delegate = self
+        
+        let content = UNMutableNotificationContent()
+        content.title = "It's title"
+        content.body = "It's body"
+        content.badge = 1
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let identifier = UUID().uuidString
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        center.add(request)
+        
+        
         emailTextField.delegate = self
         passwordTextField.delegate = self
         buttonEnter.isEnabled = false
@@ -79,6 +99,13 @@ final class AuthorizationViewController: UIViewController {
             name: UIResponder.keyboardWillHideNotification,
             object: nil
         )
+    }
+}
+
+
+extension AuthorizationViewController: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.sound, .banner])
     }
 }
 
