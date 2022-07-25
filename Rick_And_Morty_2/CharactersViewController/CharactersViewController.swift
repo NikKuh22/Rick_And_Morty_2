@@ -17,7 +17,7 @@ protocol CharactersControllerDelegate: AnyObject {
     func charactersControllerDidFinish()
 }
 
-final class CharactersController {
+final class CharactersController: {
     enum Sort {
         case unsorted
         case status
@@ -106,15 +106,16 @@ final class CharactersController {
     }
     
     fileprivate func fetchCharacters() {
-        network.fetch { [weak self] characterModel in
+        network.fetchCharacters { [weak self] characterModel in
             self?.charactersInfoResponse = characterModel.info
             self?.charactersResultsResponce = characterModel.results
             self?.delegate?.charactersControllerDidFinish()
+            
         }
     }
     
     fileprivate func fetchNextPage() {
-        network.fetch(page: charactersInfoResponse.next) { [weak self] characterModel in
+        network.fetchNextCharacters(page: charactersInfoResponse.next) { [weak self] characterModel in
             self?.charactersInfoResponse = characterModel.info
             self?.charactersResultsResponce = characterModel.results
             self?.delegate?.charactersControllerDidFinish()
@@ -144,6 +145,35 @@ final class CharactersController {
         viewController.splitViewController?.setViewController(navigation, for: .secondary)
         viewController.splitViewController?.show(.secondary)
     }
+    
+    func randomNotification() {
+        network.fetchCharacters { [weak self] character in
+            let characterCount = character.info.count
+            let randomCharacterFromJson = Int.random(in: 1...characterCount)
+            
+            self?.network.fetchCharacter(page: "https://rickandmortyapi.com/api/character/\(randomCharacterFromJson)", completion: { resultModel in
+                let notificationCenter = UNUserNotificationCenter.current()
+                notificationCenter.requestAuthorization(options: [.alert, .sound]) { granted, error in
+                    
+                }
+                
+//                notificationCenter.delegate = self
+
+                let content = UNMutableNotificationContent()
+                content.title = resultModel.name
+                content.body = "\(resultModel.species), \(resultModel.status), \(resultModel.gender), \(resultModel.type)"
+                content.badge = 1
+                content.sound = UNNotificationSound.default
+
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+
+                let identifier = UUID().uuidString
+                let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+
+                notificationCenter.add(request)
+            })
+        }
+    }
 }
 
 final class CharactersViewController: UIViewController {
@@ -161,6 +191,8 @@ final class CharactersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        controller.randomNotification()
         
         charactersTableView.refreshControl = refreshCharacterView
 
@@ -205,6 +237,13 @@ final class CharactersViewController: UIViewController {
         if let indexPath = charactersTableView.indexPathForSelectedRow {
             charactersTableView.deselectRow(at: indexPath, animated: true)
         }
+    }
+}
+
+// MARK: - UNUserNotificationCenterDelegate
+extension CharactersViewController: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.sound, .banner])
     }
 }
 
