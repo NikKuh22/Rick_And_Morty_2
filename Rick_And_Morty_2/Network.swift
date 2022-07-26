@@ -22,7 +22,7 @@ class Network {
     func fetchCharacters(completion: @escaping (CharacterModel) -> Void) {
         let url = Self.apiURL.appendingPathComponent("character")
         
-        fetch(from: url, completion: completion)
+        fetchAllCharacters(from: url, completion: completion)
     }
     
     func fetchNextCharacters(page: String, completion: @escaping (CharacterModel) -> Void) {
@@ -31,7 +31,7 @@ class Network {
             return
         }
         
-        fetch(from: url, completion: completion)
+        fetchAllCharacters(from: url, completion: completion)
     }
     
     private func fetchCharacterResult(from url: URL, completion: @escaping (ResultsModel) -> Void) {
@@ -50,7 +50,7 @@ class Network {
         }.resume()
     }
     
-    private func fetch(from url: URL, completion: @escaping (CharacterModel) -> Void) {
+    private func fetchAllCharacters(from url: URL, completion: @escaping (CharacterModel) -> Void) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else { return }
             
