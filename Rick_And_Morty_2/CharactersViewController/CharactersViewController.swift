@@ -255,7 +255,6 @@ extension CharactersViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        filterResult.count
         controller.resolvedResults[section].count
     }
     
@@ -264,15 +263,8 @@ extension CharactersViewController: UITableViewDataSource {
         let backgroundSelectorView = UIView()
         backgroundSelectorView.backgroundColor = UIColor(named: "AccentColor")
         cell.selectedBackgroundView = backgroundSelectorView
-//        let character = filterResult[indexPath.row]
         let character = controller.resolvedResults[indexPath.section][indexPath.row]
         cell.configure(character: character)
-//        cell.nameCharacter.text = characters.name
-//        cell.speciesLabel.text = characters.species
-//        let urlImage = "\(characters.image)"
-//        let urlForImageAvatar = URL(string: urlImage)
-//        cell.imageAvatar.downloaded(from: urlForImageAvatar!)
-//        cell.imageAvatar.layer.cornerRadius = cell.imageAvatar.bounds.height / 2
         return cell
     }
 }
@@ -284,7 +276,8 @@ extension CharactersViewController: UITableViewDelegate {
             if indexPath.row == controller.resolvedResults[indexPath.section].count - 1 {
                 // fetch next page
                 controller.fetchNextPage()
-            }        }
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
