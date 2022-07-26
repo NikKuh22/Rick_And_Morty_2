@@ -12,9 +12,22 @@ import UserNotifications
 @main
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    let notificationCenter = UNUserNotificationCenter.current()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+
+        notificationCenter.requestAuthorization(options: options) {
+            (granted, error) in
+            if !granted {
+                print("User has declined notifications")
+            }
+        }
+        
+        notificationCenter.delegate = self
+        
         FirebaseApp.configure()
         return true
     }
@@ -33,6 +46,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.sound, .banner, .badge])
+    }
+}

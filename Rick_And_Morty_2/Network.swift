@@ -27,7 +27,7 @@ class Network {
     
     func fetchNextCharacters(page: String, completion: @escaping (CharacterModel) -> Void) {
         guard let url = URL(string: page) else {
-            completion(CharacterModel())
+//            completion(CharacterModel())
             return
         }
         

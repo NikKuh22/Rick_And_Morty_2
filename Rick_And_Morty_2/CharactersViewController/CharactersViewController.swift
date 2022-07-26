@@ -17,7 +17,7 @@ protocol CharactersControllerDelegate: AnyObject {
     func charactersControllerDidFinish()
 }
 
-final class CharactersController: {
+final class CharactersController {
     enum Sort {
         case unsorted
         case status
@@ -152,16 +152,16 @@ final class CharactersController: {
             let randomCharacterFromJson = Int.random(in: 1...characterCount)
             
             self?.network.fetchCharacter(page: "https://rickandmortyapi.com/api/character/\(randomCharacterFromJson)", completion: { resultModel in
-                let notificationCenter = UNUserNotificationCenter.current()
-                notificationCenter.requestAuthorization(options: [.alert, .sound]) { granted, error in
-                    
-                }
-                
-//                notificationCenter.delegate = self
 
+                let appDelegate = UIApplication.shared.delegate as? AppDelegate
+                
                 let content = UNMutableNotificationContent()
                 content.title = resultModel.name
-                content.body = "\(resultModel.species), \(resultModel.status), \(resultModel.gender), \(resultModel.type)"
+                if resultModel.type.isEmpty {
+                    content.body = "\(resultModel.species), \(resultModel.status), \(resultModel.gender)"
+                } else {
+                    content.body = "\(resultModel.species), \(resultModel.status), \(resultModel.gender), \(resultModel.type)"
+                }
                 content.badge = 1
                 content.sound = UNNotificationSound.default
 
@@ -170,7 +170,7 @@ final class CharactersController: {
                 let identifier = UUID().uuidString
                 let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
 
-                notificationCenter.add(request)
+                appDelegate?.notificationCenter.add(request)
             })
         }
     }
@@ -237,13 +237,6 @@ final class CharactersViewController: UIViewController {
         if let indexPath = charactersTableView.indexPathForSelectedRow {
             charactersTableView.deselectRow(at: indexPath, animated: true)
         }
-    }
-}
-
-// MARK: - UNUserNotificationCenterDelegate
-extension CharactersViewController: UNUserNotificationCenterDelegate {
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.sound, .banner])
     }
 }
 
