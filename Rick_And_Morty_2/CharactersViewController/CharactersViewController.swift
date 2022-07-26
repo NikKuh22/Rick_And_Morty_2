@@ -162,7 +162,6 @@ final class CharactersController {
                 } else {
                     content.body = "\(resultModel.species), \(resultModel.status), \(resultModel.gender), \(resultModel.type)"
                 }
-                content.badge = 1
                 content.sound = UNNotificationSound.default
 
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
