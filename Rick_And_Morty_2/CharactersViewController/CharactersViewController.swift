@@ -155,21 +155,52 @@ final class CharactersController {
 
                 let appDelegate = UIApplication.shared.delegate as? AppDelegate
                 
-                let content = UNMutableNotificationContent()
-                content.title = resultModel.name
-                if resultModel.type.isEmpty {
-                    content.body = "\(resultModel.species), \(resultModel.status), \(resultModel.gender)"
-                } else {
-                    content.body = "\(resultModel.species), \(resultModel.status), \(resultModel.gender), \(resultModel.type)"
-                }
-                content.sound = UNNotificationSound.default
+                guard let urlImageFromJson = URL(string: resultModel.image) else { return }
+                URLSession.shared.dataTask(with: urlImageFromJson) { data, response, error in
+                    guard data == data else {
+                        return
+                    }
+                    let content = UNMutableNotificationContent()
+                    content.title = resultModel.name
+                    if resultModel.type.isEmpty {
+                        content.body = "\(resultModel.species), \(resultModel.status), \(resultModel.gender)"
+                    } else {
+                        content.body = "\(resultModel.species), \(resultModel.status), \(resultModel.gender), \(resultModel.type)"
+                    }
+                    content.sound = UNNotificationSound.default
+                    content.categoryIdentifier = "myNotificationCategory"
+                    content.userInfo = ["dateCreated": resultModel.created]
+                    content.userInfo = ["status": resultModel.status]
+                    
+                    let imageAvatar = UIImage(data: data!)
+                    let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+                    let url = documents!.appendingPathComponent("\(resultModel.id).jpeg")
+                    if let dataImage = imageAvatar?.jpegData(compressionQuality: 1.0) {
+                        do {
+                            try dataImage.write(to: url)
+                        } catch {
+                            print("Unable to Write Image Data to Disk")
+                        }
+                    }
 
-                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                    guard let imageURLS = Bundle.main.url(forResource: "imageRickAndMorty", withExtension: "png")
+                        else { return }
+                    
+                    guard let imageURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+                    print("Find \(imageURL)")
+                    do {
+                        let attachment = try UNNotificationAttachment(identifier: "imageAvatar", url: imageURLS, options: .none)
+                        content.attachments = [attachment]
+                    } catch {
+                        print(error)
+                    }
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
 
-                let identifier = UUID().uuidString
-                let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-
-                appDelegate?.notificationCenter.add(request)
+                    let identifier = UUID().uuidString
+                    let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+                    
+                    appDelegate?.notificationCenter.add(request)
+                }.resume()
             })
         }
     }

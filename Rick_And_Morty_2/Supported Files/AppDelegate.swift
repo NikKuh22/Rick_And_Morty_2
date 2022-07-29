@@ -17,8 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         let options: UNAuthorizationOptions = [.alert, .sound]
-
+        let category = UNNotificationCategory(identifier: "myNotificationCategory", actions: [], intentIdentifiers: [])
         notificationCenter.requestAuthorization(options: options) {
             (granted, error) in
             if !granted {
@@ -27,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         notificationCenter.delegate = self
-        
+        notificationCenter.setNotificationCategories([category])
         FirebaseApp.configure()
         return true
     }

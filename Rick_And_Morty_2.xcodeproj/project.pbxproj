@@ -27,11 +27,41 @@
 		3A8312C52867444E009CAB0C /* CustomHeaderForTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8312C42867444E009CAB0C /* CustomHeaderForTableView.swift */; };
 		3A8312C728678A04009CAB0C /* CustomHeaderForTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8312C628678A04009CAB0C /* CustomHeaderForTableView.xib */; };
 		3A8312CE286F279C009CAB0C /* EmptyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8312CD286F279C009CAB0C /* EmptyDetailViewController.swift */; };
+		3A970DCD28902A4C00038882 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A970DCC28902A4C00038882 /* UserNotifications.framework */; };
+		3A970DCF28902A4C00038882 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A970DCE28902A4C00038882 /* UserNotificationsUI.framework */; };
+		3A970DD228902A4C00038882 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A970DD128902A4C00038882 /* NotificationViewController.swift */; };
+		3A970DD528902A4C00038882 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A970DD328902A4C00038882 /* MainInterface.storyboard */; };
+		3A970DD928902A4C00038882 /* NotificationContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3A970DCB28902A4C00038882 /* NotificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3A970DDF289275AD00038882 /* imageRickAndMorty.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A970DDE289275AD00038882 /* imageRickAndMorty.png */; };
 		3AD117D1287D8EA500BCFF58 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD117D0287D8EA500BCFF58 /* FirebaseAuth */; };
 		3AD117D3287D8EB200BCFF58 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD117D2287D8EB200BCFF58 /* FirebaseDatabase */; };
 		3AD117D7287DB87500BCFF58 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD117D6287DB87500BCFF58 /* AuthorizationViewController.swift */; };
 		3AE09280285B486600E701C4 /* MainSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0927F285B486600E701C4 /* MainSplitViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A970DD728902A4C00038882 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A6FF115284774B1006855F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A970DCA28902A4C00038882;
+			remoteInfo = NotificationContent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3A970DDD28902A4C00038882 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3A970DD928902A4C00038882 /* NotificationContent.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3A1917772856134400F1A506 /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
@@ -56,6 +86,13 @@
 		3A8312C42867444E009CAB0C /* CustomHeaderForTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderForTableView.swift; sourceTree = "<group>"; };
 		3A8312C628678A04009CAB0C /* CustomHeaderForTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderForTableView.xib; sourceTree = "<group>"; };
 		3A8312CD286F279C009CAB0C /* EmptyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDetailViewController.swift; sourceTree = "<group>"; };
+		3A970DCB28902A4C00038882 /* NotificationContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A970DCC28902A4C00038882 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		3A970DCE28902A4C00038882 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		3A970DD128902A4C00038882 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		3A970DD428902A4C00038882 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		3A970DD628902A4C00038882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A970DDE289275AD00038882 /* imageRickAndMorty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageRickAndMorty.png; sourceTree = "<group>"; };
 		3AD117D6287DB87500BCFF58 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		3AE0927F285B486600E701C4 /* MainSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +107,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A970DC828902A4C00038882 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A970DCF28902A4C00038882 /* UserNotificationsUI.framework in Frameworks */,
+				3A970DCD28902A4C00038882 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				3A6FF129284774B2006855F4 /* Assets.xcassets */,
+				3A970DDE289275AD00038882 /* imageRickAndMorty.png */,
 				3A6FF12B284774B2006855F4 /* LaunchScreen.storyboard */,
 				3A6FF12E284774B2006855F4 /* Info.plist */,
 				3A76386F2883040C006C5032 /* GoogleService-Info.plist */,
@@ -121,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				3A6FF11F284774B1006855F4 /* Rick_And_Morty_2 */,
+				3A970DD028902A4C00038882 /* NotificationContent */,
 				3A6FF11E284774B1006855F4 /* Products */,
 				3AD117CF287D8EA500BCFF58 /* Frameworks */,
 			);
@@ -130,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				3A6FF11D284774B1006855F4 /* Rick_And_Morty_2.app */,
+				3A970DCB28902A4C00038882 /* NotificationContent.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,9 +225,21 @@
 			path = CustomHeaderForTableView;
 			sourceTree = "<group>";
 		};
+		3A970DD028902A4C00038882 /* NotificationContent */ = {
+			isa = PBXGroup;
+			children = (
+				3A970DD128902A4C00038882 /* NotificationViewController.swift */,
+				3A970DD328902A4C00038882 /* MainInterface.storyboard */,
+				3A970DD628902A4C00038882 /* Info.plist */,
+			);
+			path = NotificationContent;
+			sourceTree = "<group>";
+		};
 		3AD117CF287D8EA500BCFF58 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A970DCC28902A4C00038882 /* UserNotifications.framework */,
+				3A970DCE28902A4C00038882 /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,10 +270,12 @@
 				3A6FF119284774B1006855F4 /* Sources */,
 				3A6FF11A284774B1006855F4 /* Frameworks */,
 				3A6FF11B284774B1006855F4 /* Resources */,
+				3A970DDD28902A4C00038882 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3A970DD828902A4C00038882 /* PBXTargetDependency */,
 			);
 			name = Rick_And_Morty_2;
 			packageProductDependencies = (
@@ -222,6 +285,23 @@
 			productName = Rick_And_Morty_2;
 			productReference = 3A6FF11D284774B1006855F4 /* Rick_And_Morty_2.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3A970DCA28902A4C00038882 /* NotificationContent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A970DDA28902A4C00038882 /* Build configuration list for PBXNativeTarget "NotificationContent" */;
+			buildPhases = (
+				3A970DC728902A4C00038882 /* Sources */,
+				3A970DC828902A4C00038882 /* Frameworks */,
+				3A970DC928902A4C00038882 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationContent;
+			productName = NotificationContent;
+			productReference = 3A970DCB28902A4C00038882 /* NotificationContent.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -234,6 +314,9 @@
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					3A6FF11C284774B1006855F4 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					3A970DCA28902A4C00038882 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
@@ -255,6 +338,7 @@
 			projectRoot = "";
 			targets = (
 				3A6FF11C284774B1006855F4 /* Rick_And_Morty_2 */,
+				3A970DCA28902A4C00038882 /* NotificationContent */,
 			);
 		};
 /* End PBXProject section */
@@ -270,6 +354,15 @@
 				3A8312C728678A04009CAB0C /* CustomHeaderForTableView.xib in Resources */,
 				3A1917782856134400F1A506 /* CharacterTableViewCell.xib in Resources */,
 				3A7638702883040C006C5032 /* GoogleService-Info.plist in Resources */,
+				3A970DDF289275AD00038882 /* imageRickAndMorty.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A970DC928902A4C00038882 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A970DD528902A4C00038882 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +392,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3A970DC728902A4C00038882 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A970DD228902A4C00038882 /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A970DD828902A4C00038882 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A970DCA28902A4C00038882 /* NotificationContent */;
+			targetProxy = 3A970DD728902A4C00038882 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3A6FF126284774B1006855F4 /* Main.storyboard */ = {
@@ -316,6 +425,14 @@
 				3A6FF12C284774B2006855F4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3A970DD328902A4C00038882 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A970DD428902A4C00038882 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -438,6 +555,7 @@
 		3A6FF132284774B2006855F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -465,6 +583,7 @@
 		3A6FF133284774B2006855F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -489,6 +608,54 @@
 			};
 			name = Release;
 		};
+		3A970DDB28902A4C00038882 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationContent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationContent;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Nik.Rick-And-Morty-2.NotificationContent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A970DDC28902A4C00038882 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationContent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationContent;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Nik.Rick-And-Morty-2.NotificationContent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -506,6 +673,15 @@
 			buildConfigurations = (
 				3A6FF132284774B2006855F4 /* Debug */,
 				3A6FF133284774B2006855F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A970DDA28902A4C00038882 /* Build configuration list for PBXNativeTarget "NotificationContent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A970DDB28902A4C00038882 /* Debug */,
+				3A970DDC28902A4C00038882 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

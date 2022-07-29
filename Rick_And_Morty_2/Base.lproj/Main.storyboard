@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Bi-QL-xXb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mp3-rb-CF3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -66,7 +66,7 @@
                                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QeQ-OD-E84">
                                                 <rect key="frame" x="0.0" y="0.0" width="342" height="51.5"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="r7b-Of-32b">
-                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="51"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="51.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dMi-Nq-9im">
@@ -100,7 +100,7 @@
                                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrA-lP-ccF">
                                                 <rect key="frame" x="0.0" y="58.5" width="342" height="51.5"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oEf-SY-atF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="52"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="51.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NUd-W1-aTe">
@@ -134,7 +134,7 @@
                                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6Z-BK-w56">
                                                 <rect key="frame" x="0.0" y="117" width="342" height="51.5"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PxA-aE-AyH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="51"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="51.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="RJ7-Vd-0cg">
@@ -168,7 +168,7 @@
                                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nyO-FV-wcZ">
                                                 <rect key="frame" x="0.0" y="175.5" width="342" height="51.5"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2iA-C3-dak">
-                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="52"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="51.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hnK-9i-2vT">
@@ -263,7 +263,7 @@
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qva-CE-I4j">
                                 <rect key="frame" x="83.5" y="446" width="247.5" height="58.5"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jLH-vg-mkg">
-                                    <rect key="frame" x="0.0" y="0.0" width="247" height="58"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="247.5" height="58.5"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8.4499999999999993" translatesAutoresizingMaskIntoConstraints="NO" id="kev-EP-XsR">
