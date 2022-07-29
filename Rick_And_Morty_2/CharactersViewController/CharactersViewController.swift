@@ -170,7 +170,6 @@ final class CharactersController {
                     content.sound = UNNotificationSound.default
                     content.categoryIdentifier = "myNotificationCategory"
                     content.userInfo = ["dateCreated": resultModel.created]
-                    content.userInfo = ["status": resultModel.status]
                     
                     let imageAvatar = UIImage(data: data!)
                     let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
