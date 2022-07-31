@@ -169,26 +169,23 @@ final class CharactersController {
                     }
                     content.sound = UNNotificationSound.default
                     content.categoryIdentifier = "myNotificationCategory"
-                    content.userInfo = ["dateCreated": resultModel.created]
+                    content.userInfo = ["dateCreated": resultModel.created, "species": resultModel.species, "gender": resultModel.gender.rawValue]
                     
                     let imageAvatar = UIImage(data: data!)
                     let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-                    let url = documents!.appendingPathComponent("\(resultModel.id).jpeg")
-                    if let dataImage = imageAvatar?.jpegData(compressionQuality: 1.0) {
+                    let url = documents!.appendingPathComponent("image.png")
+                    if let dataImage = imageAvatar?.pngData() {
                         do {
                             try dataImage.write(to: url)
                         } catch {
                             print("Unable to Write Image Data to Disk")
                         }
                     }
-
-                    guard let imageURLS = Bundle.main.url(forResource: "imageRickAndMorty", withExtension: "png")
-                        else { return }
                     
-                    guard let imageURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
-                    print("Find \(imageURL)")
+                    guard let imageURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("image.png") else { return }
+                    
                     do {
-                        let attachment = try UNNotificationAttachment(identifier: "imageAvatar", url: imageURLS, options: .none)
+                        let attachment = try UNNotificationAttachment(identifier: "imageAvatar", url: imageURL, options: .none)
                         content.attachments = [attachment]
                     } catch {
                         print(error)

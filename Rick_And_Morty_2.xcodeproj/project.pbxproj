@@ -32,7 +32,6 @@
 		3A970DD228902A4C00038882 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A970DD128902A4C00038882 /* NotificationViewController.swift */; };
 		3A970DD528902A4C00038882 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A970DD328902A4C00038882 /* MainInterface.storyboard */; };
 		3A970DD928902A4C00038882 /* NotificationContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3A970DCB28902A4C00038882 /* NotificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3A970DDF289275AD00038882 /* imageRickAndMorty.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A970DDE289275AD00038882 /* imageRickAndMorty.png */; };
 		3AD117D1287D8EA500BCFF58 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD117D0287D8EA500BCFF58 /* FirebaseAuth */; };
 		3AD117D3287D8EB200BCFF58 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD117D2287D8EB200BCFF58 /* FirebaseDatabase */; };
 		3AD117D7287DB87500BCFF58 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD117D6287DB87500BCFF58 /* AuthorizationViewController.swift */; };
@@ -92,7 +91,6 @@
 		3A970DD128902A4C00038882 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		3A970DD428902A4C00038882 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		3A970DD628902A4C00038882 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A970DDE289275AD00038882 /* imageRickAndMorty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageRickAndMorty.png; sourceTree = "<group>"; };
 		3AD117D6287DB87500BCFF58 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		3AE0927F285B486600E701C4 /* MainSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				3A6FF129284774B2006855F4 /* Assets.xcassets */,
-				3A970DDE289275AD00038882 /* imageRickAndMorty.png */,
 				3A6FF12B284774B2006855F4 /* LaunchScreen.storyboard */,
 				3A6FF12E284774B2006855F4 /* Info.plist */,
 				3A76386F2883040C006C5032 /* GoogleService-Info.plist */,
@@ -354,7 +351,6 @@
 				3A8312C728678A04009CAB0C /* CustomHeaderForTableView.xib in Resources */,
 				3A1917782856134400F1A506 /* CharacterTableViewCell.xib in Resources */,
 				3A7638702883040C006C5032 /* GoogleService-Info.plist in Resources */,
-				3A970DDF289275AD00038882 /* imageRickAndMorty.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

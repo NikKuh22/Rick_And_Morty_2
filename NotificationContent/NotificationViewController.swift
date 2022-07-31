@@ -37,7 +37,7 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         
         let content = notification.request.content
         
-        let color = UIColor.blue
+        let color = UIColor.yellow
         
         gradientLayer.colors = [
             color.withAlphaComponent(0.35).cgColor as Any,
@@ -47,9 +47,11 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         gradientLayer.endPoint = .init(x: 1, y: 1)
         gradientLayer.locations = [0, 0.4]
         view.layer.insertSublayer(gradientLayer, at: 0)
-        
+        let species = content.userInfo["species"] as! String
+        let gender = content.userInfo["gender"] as! String
+
         self.nameLabel.text = content.title
-        self.infoLabel.text = content.body
+        self.infoLabel.text = "\(species), \(gender)"
         
         if let data = content.userInfo["dateCreated"] as? Date {
             let formatter = DateFormatter()
