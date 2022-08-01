@@ -32,6 +32,12 @@
 		3A970DD228902A4C00038882 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A970DD128902A4C00038882 /* NotificationViewController.swift */; };
 		3A970DD528902A4C00038882 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A970DD328902A4C00038882 /* MainInterface.storyboard */; };
 		3A970DD928902A4C00038882 /* NotificationContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3A970DCB28902A4C00038882 /* NotificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3A970DE02897CA8900038882 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A6FF129284774B2006855F4 /* Assets.xcassets */; };
+		3A970DE22897CB3800038882 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6FF1342847A53B006855F4 /* CharacterModel.swift */; };
+		3A970DE32897CB3B00038882 /* ResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A19177B285614A800F1A506 /* ResultsModel.swift */; };
+		3A970DE42897CB3E00038882 /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A19177D285614C000F1A506 /* InfoModel.swift */; };
+		3A970DE52897CB4100038882 /* OriginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A19177F285614D500F1A506 /* OriginModel.swift */; };
+		3A970DE62897CB4400038882 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1917812856153800F1A506 /* LocationModel.swift */; };
 		3AD117D1287D8EA500BCFF58 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD117D0287D8EA500BCFF58 /* FirebaseAuth */; };
 		3AD117D3287D8EB200BCFF58 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD117D2287D8EB200BCFF58 /* FirebaseDatabase */; };
 		3AD117D7287DB87500BCFF58 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD117D6287DB87500BCFF58 /* AuthorizationViewController.swift */; };
@@ -358,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A970DE02897CA8900038882 /* Assets.xcassets in Resources */,
 				3A970DD528902A4C00038882 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,7 +399,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A970DE32897CB3B00038882 /* ResultsModel.swift in Sources */,
 				3A970DD228902A4C00038882 /* NotificationViewController.swift in Sources */,
+				3A970DE22897CB3800038882 /* CharacterModel.swift in Sources */,
+				3A970DE42897CB3E00038882 /* InfoModel.swift in Sources */,
+				3A970DE62897CB4400038882 /* LocationModel.swift in Sources */,
+				3A970DE52897CB4100038882 /* OriginModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

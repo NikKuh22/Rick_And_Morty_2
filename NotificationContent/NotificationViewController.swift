@@ -34,21 +34,24 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     }
     
     func didReceive(_ notification: UNNotification) {
-        
+
         let content = notification.request.content
         
-        let color = UIColor.yellow
+        let species = content.userInfo["species"] as! String
+        let gender = content.userInfo["gender"] as! String
+        let status = content.userInfo["status"] as! String
+        
+        let color = CharacterStatus(rawValue: status)?.color
         
         gradientLayer.colors = [
-            color.withAlphaComponent(0.35).cgColor as Any,
-            color.withAlphaComponent(0.15).cgColor as Any
+            color?.withAlphaComponent(0.35).cgColor as Any,
+            color?.withAlphaComponent(0.15).cgColor as Any
         ]
         gradientLayer.startPoint = .init(x: 0, y: 0)
         gradientLayer.endPoint = .init(x: 1, y: 1)
         gradientLayer.locations = [0, 0.4]
         view.layer.insertSublayer(gradientLayer, at: 0)
-        let species = content.userInfo["species"] as! String
-        let gender = content.userInfo["gender"] as! String
+
 
         self.nameLabel.text = content.title
         self.infoLabel.text = "\(species), \(gender)"
