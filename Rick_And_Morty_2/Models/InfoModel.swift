@@ -10,13 +10,13 @@ import UIKit
 struct InfoModel: Decodable {
     var count: Int
     var pages: Int
-    var next: String
+    var next: String?
     var prev: String?
     
     init() {
         count = 0
         pages = 0
-        next = ""
+        next = nil
         prev = nil
     }
 }

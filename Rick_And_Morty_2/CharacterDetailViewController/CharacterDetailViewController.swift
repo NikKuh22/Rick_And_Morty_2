@@ -8,7 +8,7 @@
 import UIKit
 
 final class CharacterDetailController {
-    // Make this non-optional
+    
     fileprivate let character: ResultsModel
     
     var name: String { character.name }

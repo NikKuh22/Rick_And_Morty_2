@@ -115,9 +115,11 @@ final class CharactersController {
     }
     
     fileprivate func fetchNextPage() {
-        network.fetchNextCharacters(page: charactersInfoResponse.next) { [weak self] characterModel in
+        guard let next = charactersInfoResponse.next else { return }
+        
+        network.fetchNextCharacters(page: next) { [weak self] characterModel in
             self?.charactersInfoResponse = characterModel.info
-            self?.charactersResultsResponce = characterModel.results
+            self?.charactersResultsResponce += characterModel.results
             self?.delegate?.charactersControllerDidFinish()
         }
     }
